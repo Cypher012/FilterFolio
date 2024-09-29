@@ -252,3 +252,4 @@ window.addEventListener('resize', () => showSlides(currentIndex));
 """
     return html
 
+
