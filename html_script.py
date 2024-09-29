@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import  base64, os
+import  base64
 from pathlib import Path
 
 
