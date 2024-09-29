@@ -1,9 +1,13 @@
-import io, base64
-import cv2, numpy as np
-import streamlit as st
+import io
+import base64
+
+import cv2
+import numpy as np
 from PIL import Image
-from filters import *
+import streamlit as st
 import streamlit.components.v1 as components
+
+from filters import *
 from html_script import *
 
 
