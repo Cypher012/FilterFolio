@@ -14,9 +14,9 @@ from html_script import *
 
 def get_image_download_link(img, filename, text):
     buffered = io.BytesIO()
-    img.save(buffered, format='JPEG')
+    img.save(buffered, format='PNG')
     img_str = base64.b64encode(buffered.getvalue()).decode()
-    href = f'<a href="data:file/txt;base64,{img_str}" download="{filename}">{text}</a>'
+    href = f'<a href="data:file/png;base64,{img_str}" download="{filename}">{text}</a>'
     return href
 
 def markdown_text(text, mb=0):
@@ -115,4 +115,4 @@ if uploaded_file is not None:
             else:
                 result = Image.fromarray(output_image)
             # Display link
-            st.markdown(get_image_download_link(result, "output.jpg", "Download Output"), unsafe_allow_html=True)
+            st.markdown(get_image_download_link(result, "output.png", "Download Output"), unsafe_allow_html=True)
