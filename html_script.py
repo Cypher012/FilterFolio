@@ -17,17 +17,12 @@ filesname = ["Black and White", "Sepia / Vintage", "Vignette Effect", "Pencil Sk
 
 image_html = ""
 for file, filename in zip(files, filesname):
-    # Create a unique image URL and alt text for each image
     image_html += f"""
     <div  class="slide">
       <p>{filename}</p>  
       <img src='data:image/png;base64,{img_to_bytes(f"./static/{file}")}' class='img-fluid'>
     </div>
     """
-
-
-# Define the HTML content with CSS and JavaScript
-
 
 
 
@@ -153,7 +148,7 @@ components.html(html_content, height=200)     .slides {{
 <div class="slider">
   <div class="slides">
     <div class="slides">
-    {image_html} <!-- Insert generated HTML for images here -->
+    {image_html} 
   </div>
   </div>
 

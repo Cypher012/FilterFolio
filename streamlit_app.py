@@ -115,4 +115,4 @@ if uploaded_file is not None:
             else:
                 result = Image.fromarray(output_image)
             # Display link
-            st.markdown(get_image_download_link(result, "output.png", "Download Output"), unsafe_allow_html=True)
+            st.markdown(get_image_download_link(result, "output.jpg", "Download Output"), unsafe_allow_html=True)
